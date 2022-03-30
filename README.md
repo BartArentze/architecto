@@ -1,4 +1,4 @@
-# Project [Architecto](!http://architecto.bartarentze.nl)
+# Project [Architecto](http://architecto.bartarentze.nl)
 
 I designed this project from scratch and then converted it into an website. I made the design with Adobe XD. During development I used a Bootstrap 5 template that compiled scss files into one large css file.
 
@@ -6,7 +6,7 @@ I designed this project from scratch and then converted it into an website. I ma
 
 [![Bare Preview](https://bartarentze.nl/assets/img/projecten/architecto.png)](https://startbootstrap.github.io/startbootstrap-bare/)
 
-**[View Live Preview](!http://architecto.bartarentze.nl)**
+**[View Live Preview](http://architecto.bartarentze.nl)**
 
 ## Usage
 
