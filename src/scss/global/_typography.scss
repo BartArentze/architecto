@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Body text Styles */
+a,
+p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  color: $black;
+
+  &::selection {
+    color: $white;
+    background: $primary;
+  }
+}
+
+.required-star {
+  color: $red;
+  font-size: 30px;
+  font-weight: 900;
+  vertical-align: -10px;
+}
+
+.required-star-label {
+  color: $red;
+  font-size: 16px;
+  font-weight: 900;
+  vertical-align: 0px;
+}
+
+/* Heading Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: $black;
+  margin: 0;
+  &::selection {
+    color: $white;
+    background: $primary;
+  }
+}
+
+h1 {
+  font-size: 74px;
+  line-height: 80px;
+  color: $white;
+
+  @media (max-width: 576px) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 28px;
+}
+h6 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.subtitle {
+  text-align: left;
+  font: normal normal bold 20px/30px Poppins;
+  letter-spacing: 0px;
+  color: $black;
+  opacity: 0.75;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Link Styles */
+
+.custom-action-link {
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.4s ease;
+  padding-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    top: 30px;
+    left: 0;
+    position: absolute;
+    transition: width 0.4s ease;
+  }
+  &__light {
+    color: $white;
+    &::after {
+      background-color: $white;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__dark {
+    color: $black;
+    &::after {
+      background-color: $black;
+    }
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primary;
+  }
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 10px;
+  &:before {
+    content: "";
+    background-image: url("../../assets/icons/list-item.svg");
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: -5px;
+  }
+}
+
+.contact-links {
+  a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__phone {
+    &:before {
+      content: "";
+      background-image: url("../../assets/icons/phone.svg");
+      height: 20px;
+      width: 20px;
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: -5px;
+    }
+  }
+
+  &__email {
+    &:before {
+      content: "";
+      background-image: url("../../assets/icons/mail.svg");
+      height: 15px;
+      width: 20px;
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: -2px;
+    }
+  }
+
+  &__address {
+    margin-left: 30px;
+    position: relative;
+    &:before {
+      content: "";
+      background-image: url("../../assets/icons/location.svg");
+      height: 20px;
+      width: 15px;
+      position: absolute;
+      top: 4px;
+      left: -30px;
+    }
+    .google-maps-link {
+      margin-top: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      color: $black;
+
+      &:hover {
+        color: $black;
+        text-decoration: underline;
+      }
+    }
+  }
+}

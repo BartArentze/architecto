@@ -1,0 +1,53 @@
+// Import Bootstrap
+@import "components/bootstrap";
+
+// Global Files
+@import "global/colors";
+@import "global/typography";
+
+// Components
+@import "partials/header";
+@import "partials/footer";
+
+// Views
+@import "views/homepage-masthead";
+@import "views/homepage-about";
+@import "views/homepage-expertise";
+@import "views/homepage-news";
+// Owl-Carousel Overwrites
+@import "components/owl-carousel";
+
+body {
+  margin-top: 60px;
+  position: relative;
+
+  .back-to-top {
+    display: inline-block;
+    background-color: $black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    padding-top: 8px;
+
+    &__show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+section {
+  margin: 160px 0;
+  background-color: $white;
+}
